@@ -1,0 +1,45 @@
+{
+    "description" : "Awaiting Certification - Collects statistics from PostgreSQL Database",
+    "command" : "java -jar plugin.jar",
+    "icon" : "icon.png",
+    "metrics" : [
+                 "CASSANDRA_METRIC"
+                ],
+    "dashboards": [ ],
+    "paramSchema" : [
+        {
+            "title" : "host",
+            "description" : "database host name or IP",
+            "type" : "string",
+            "default" : "127.0.0.1"
+        },
+        {
+            "title" : "port",
+            "description" : "PostgreSQL Port",
+            "type" : "integer",
+            "default" : "5432"
+        },
+        {
+            "title" : "database",
+            "description" : "database name",
+            "type" : "string",
+            "default" : "postgres"
+        },
+        {
+            "title" : "username",
+            "description" : "PostgreSQL username",
+            "type" : "string"
+        },
+        {
+            "title" : "password",
+            "description" : "PostgreSQL Password (if not required put anything)",
+            "type" : "password"
+        },
+        {
+            "title" : "source",
+            "description" : "display name",
+            "type" : "string",
+            "default" : "My_PGSQL_Server"
+        }
+    ]
+}

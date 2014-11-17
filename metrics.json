@@ -1,0 +1,14 @@
+{
+    "result": [
+        {
+            "defaultAggregate": "SUM",
+            "defaultResolutionMS": 1000,
+            "description": "Cassandra - Metric",
+            "displayName": "Cassandra - Metric",
+            "displayNameShort": "CAS - Metric",
+            "isDisabled": 0,
+            "name": "CASSANDRA_METRIC",
+            "unit": "number"
+        }
+    ]
+}
