@@ -14,30 +14,21 @@
 
 package com.boundary.plugin.jmx;
 
-public class Example implements ExampleMBean {
+import java.lang.management.ManagementFactory;
+import javax.management.ObjectName;
+import javax.management.MBeanServer;
 
-	private final String name = "Reginald";
-	private int cacheSize = DEFAULT_CACHE_SIZE;
-	private static final int DEFAULT_CACHE_SIZE = 200;
-
-	public void sayHello() {
-		System.out.println("hello, world");
-	}
-
-	public int add(int x, int y) {
-		return x + y;
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public int getCacheSize() {
-		return this.cacheSize;
-	}
-
-	public void setCacheSize(int size) {
-		this.cacheSize = size;
-		System.out.println("Cache size now " + this.cacheSize);
-	}
-}
+public class ExampleAgent { 
+ 
+    public static void main(String[] args) 
+        throws Exception { 
+     
+        MBeanServer mbs = ManagementFactory.getPlatformMBeanServer(); 
+        ObjectName name = new ObjectName("com.boundary.plugin.jmx:type=Example"); 
+        Example mbean = new Example(); 
+        mbs.registerMBean(mbean, name); 
+          
+        System.out.println("Waiting forever..."); 
+        Thread.sleep(Long.MAX_VALUE); 
+    } 
+} 
