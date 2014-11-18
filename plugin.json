@@ -1,6 +1,6 @@
 {
-    "description" : "Awaiting Certification - Collects statistics from PostgreSQL Database",
-    "command" : "java -jar plugin.jar",
+    "description" : "Awaiting Certification - Collects statistics from Cassandra Cluster",
+    "command" : "java -jar plugin.jar com.boundary.plugin.CassandraPlugin",
     "icon" : "icon.png",
     "metrics" : [
                  "CASSANDRA_METRIC"
